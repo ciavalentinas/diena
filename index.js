@@ -80,13 +80,24 @@ function updateText(buttonId) {
   }
 }
 
-
+var pickuplines = [
+  "Jeigu tau patinka saldainiai, tai žinok, jog aš tikras vaflis.",
+  "Ar tu tektoninė plokštė? Nes tu drebini mano pasaulį.",
+  "Gali iškviesti greitąją? Man aštavemyliozė.",
+  "Ar tu angelas? Nes aš alergiškas plunksnoms... AA. AA.. APČY...",
+  "Ar tu blakstiena? Nes sugebi greit krist į akį.",
+  "Ar tu kava? Nes dėl tavęs miegot negaliu.",
+  "Ką tu? Ką vakare?",
+  "Ar tu padaryta iš plazmos? Nes tu karšta."
+]
 
 function submit() {
   document.getElementById("allafterall").style.visibility = "hidden";
 
   var newItem = document.getElementById("inputText").value;
 
+  var lainas = pickuplines[Math.floor(Math.random()*items.length)];
+
   var tekstasomenyje = document.getElementById("omeny");
-  tekstasomenyje.innerHTML = "Turėsiu omenyje, " + newItem + ". ❤";
+  tekstasomenyje.innerHTML = "Turėsiu omenyje, " + newItem + ". ❤\n" + "O šiaip... " + lainas;
 }
