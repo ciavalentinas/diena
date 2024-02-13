@@ -11,17 +11,6 @@ function hellnah() {
   if (nahButton) {
     nahButton.addEventListener("click", function () {
       if (clickCount < 4) {
-        const currentWidth = window.getComputedStyle(yesButton).width;
-        const currentHeight = window.getComputedStyle(yesButton).height;
-
-        const currentWidthValue = parseFloat(currentWidth);
-        const currentHeightValue = parseFloat(currentHeight);
-
-        const newWidth = currentWidthValue * 1.5;
-        const newHeight = currentHeightValue * 1.5;
-
-        yesButton.style.width = newWidth + "px";
-        yesButton.style.height = newHeight + "px";
 
         clickCount++;
 
@@ -100,7 +89,6 @@ function submit() {
 
   var tekstasomenyje = document.getElementById("omeny");
   tekstasomenyje.innerHTML = "Turėsiu omenyje, " + newItem + ". ❤";
-
   var antrasis = document.getElementById("omeny2");
   antrasis.innerHTML = "O šiaip... " + lainas;
 }
