@@ -1,0 +1,188 @@
+<html>
+  <head>
+    <title>Valentinas Vienas</title>
+    <link rel="icon" type="image/x-icon" href="heart.png" />
+    <script src="index.js"></script>
+  </head>
+  <style>
+    @font-face {
+      font-family: ValentineFont;
+      src: url(LoveLight-Regular.ttf);
+    }
+
+    @font-face {
+      font-family: Typing;
+      src: url(SpecialElite-Regular.ttf);
+    }
+
+    @keyframes shake {
+      10%,
+      90% {
+        transform: translate3d(-1px, 0, 0);
+      }
+      20%,
+      80% {
+        transform: translate3d(2px, 0, 0);
+      }
+      30%,
+      50%,
+      70% {
+        transform: translate3d(-4px, 0, 0);
+      }
+      40%,
+      60% {
+        transform: translate3d(4px, 0, 0);
+      }
+    }
+
+    .bond {
+      font-family: Typing;
+      text-align: center;
+      font-size: 70px;
+      color: white;
+      text-shadow: 2px 2px #000000;
+    }
+
+    .notbond {
+      font-family: Typing;
+      text-align: center;
+      font-size: 30px;
+      color: white;
+      text-shadow: 2px 2px #000000;
+    }
+
+    body {
+      margin: 0;
+      background-color: #d94f5c;
+      border: white;
+      border-style: solid;
+      border-width: 10px;
+    }
+
+    #faketitle {
+      text-align: center;
+      color: white;
+      text-shadow: 1px 1px #000000;
+    }
+
+    #maintitle {
+      text-align: center;
+      font-family: ValentineFont;
+      font-size: 500%;
+      color: rgb(255, 255, 255);
+      text-shadow: 2px 2px #000000;
+    }
+
+    #buttons {
+      text-align: center;
+    }
+
+    .button {
+      border-radius: 4px;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 32px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+
+    .button1 {
+      background-color: #04aa6d;
+      border: 2px solid #01945e;
+    }
+
+    .button1:hover {
+      background-color: #02cc82;
+      color: white;
+    }
+
+    .button2 {
+      background-color: #c00000;
+      border: 2px solid #8e0000;
+    }
+
+    .button2:hover {
+      background-color: #490000;
+      color: white;
+      animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+      transform: translate3d(0, 0, 0);
+      perspective: 1000px;
+    }
+
+    #inputText {
+      font-family: inherit;
+      border: 0;
+      border-bottom: 2px solid white;
+      outline: 0;
+      font-size: 1.3rem;
+      color: white;
+      padding: 7px 0;
+      background: transparent;
+      transition: border-color 0.2s;
+    }
+
+    #inputfields {
+      text-align: center;
+    }
+
+    ::placeholder {
+      color: white;
+    }
+
+    #siusti {
+      background-color: white;
+      color: rgb(255, 75, 75);
+      border: none;
+      border-radius: 15px;
+      box-shadow: 3px 3px gray;
+      padding: 15px;
+    }
+
+    #omeny {
+      font-family: ValentineFont;
+      text-align: center;
+      color: white;
+      font-size: 100px;
+    }
+
+  </style>
+  <body onload="secure()">
+    <br />
+    <div id="allinall">
+      <h2 id="faketitle">Angliškai geriau skamba...</h2>
+      <h1 id="maintitle">Will you be my valentine?</h1>
+      <div id="buttons">
+        <button
+          onclick="updateText('button1')"
+          class="button button1"
+          id="button1"
+        >
+          Taip
+        </button>
+        <button
+          onclick="hellnah();updateText('button2')"
+          class="button button2"
+          id="button2"
+        >
+          Ne
+        </button>
+      </div>
+    </div>
+    <p id="omeny"></p>
+    <div id="allafterall">
+      <h1 class="bond">My name is... Bond, James Bond.</h1>
+      <br />
+      <h2 class="notbond">(Vertimas iš anglų kalbos.)</h2>
+      <h1 class="bond">Mano vardas... Didysis, Ugnius Didysis.</h1>
+      <div id="inputfields">
+        <input id="inputText" placeholder="O dabar tavo vardas :3" class="styled-input"></input>
+        <button id="siusti" onclick="submit()">Siųsti</button>
+      </div>
+    </div>
+  </body>
+</html>
