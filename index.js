@@ -99,5 +99,8 @@ function submit() {
   var lainas = pickuplines[Math.floor(Math.random()*pickuplines.length)];
 
   var tekstasomenyje = document.getElementById("omeny");
-  tekstasomenyje.innerHTML = "Turėsiu omenyje, " + newItem + ". ❤\n" + "O šiaip... " + lainas;
+  tekstasomenyje.innerHTML = "Turėsiu omenyje, " + newItem + ". ❤";
+
+  var antrasis = document.getElementById("omeny2");
+  antrasis.innerHTML = "O šiaip... " + lainas;
 }
