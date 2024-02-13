@@ -96,7 +96,7 @@ function submit() {
 
   var newItem = document.getElementById("inputText").value;
 
-  var lainas = pickuplines[Math.floor(Math.random()*items.length)];
+  var lainas = pickuplines[Math.floor(Math.random()*pickuplines.length)];
 
   var tekstasomenyje = document.getElementById("omeny");
   tekstasomenyje.innerHTML = "Turėsiu omenyje, " + newItem + ". ❤\n" + "O šiaip... " + lainas;
